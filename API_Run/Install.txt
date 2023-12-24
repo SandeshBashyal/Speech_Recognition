@@ -1,0 +1,11 @@
+sudo apt install portaudio19-dev
+sudo apt install espeak
+
+pip3 install pyaudio
+pip3 install pyttsx3
+pip3 install SpeechRecognition
+pip3 install pocketsphinx
+pip3 install vosk
+
+Run file:
+python3 speech_recog.py 2>/dev/null
