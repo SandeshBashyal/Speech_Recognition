@@ -4,7 +4,7 @@ import speech_recognition as sr
 import time
 # from vosk import Model, KaldiRecognizer
 
-sample_rate = 16000
+# sample_rate = 16000
 
 def takeCommand():
     r = sr.Recognizer()
@@ -29,11 +29,11 @@ def takeCommand():
 
         except sr.UnknownValueError:
             print('Sorry, I did not hear your request.')
-            # query = ""
+            query = ""
 
         except sr.RequestError as e:
             print(f"Could not request results from Google Speech Recognition service; {e}")
-            # query = ""
+            query = ""
 
     return query.lower()
 
