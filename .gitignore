@@ -1,0 +1,5 @@
+.venv/
+API_Run/vosk-model-en-us-0.22
+API_Run/vosk-model-small-en-us-0.15
+API_Run/__pycache__
+API_Run/Unconfirmed 89432.crdownload

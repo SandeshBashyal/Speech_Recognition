@@ -1,0 +1,6 @@
+python your_script.py
+
+
+Record audio
+arecord -f cd -t wav -D hw:3,0 -d 5 -r 44100 -c 1 -v -q > recorded_audio.wav
+

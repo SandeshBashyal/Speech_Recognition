@@ -1,0 +1,8 @@
+ls /dev/tty*
+
+sudo adduser acm dialout #acm -> raspberry pi's username
+
+pip3 install pyserial -> install in virtual environment
+    sudo apt install pthon3-pip
+
+

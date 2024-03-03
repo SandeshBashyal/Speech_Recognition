@@ -1,0 +1,225 @@
+%Sagarmatha Engineering College Project Report Template
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[titles]{tocloft}
+
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{hhline}
+\usepackage{graphicx}
+\graphicspath{{./Graphics/}} 
+\usepackage[left=1.5in, right=1in,top=1in,bottom=1in,headheight=6pt, a4paper]{geometry}
+\usepackage{titling}
+\usepackage{booktabs}
+\usepackage{natbib}
+\usepackage{times}
+% \usepackage{microtype}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\usepackage[font=normalsize,labelfont=bf,tableposition=top]{caption}
+\usepackage{setspace}
+\usepackage{tabto}
+\usepackage[explicit]{titlesec}
+\usepackage[absolute]{textpos}
+\usepackage[export]{adjustbox}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{datetime}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+
+\linespread{1.5}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0em}
+\titleformat{\chapter}[display]
+    {\centering\normalfont\normalsize\bfseries}{\MakeUppercase{\chaptertitlename} \thechapter}{0pt}{\normalsize #1}
+\titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries}{\thesection}{1em}{#1}
+
+\titleformat{\subsection}
+  {\normalfont\normalsize}{\thesubsection}{1em}{#1}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize}{\thesubsection}{1em}{#1}
+
+\renewcommand{\baselinestretch}{1.5}
+
+
+
+\captionsetup[table]{singlelinecheck=off}
+\title{HOME AUTOMATION USING SPEECH RECOGNITION}
+\author{Member1, Member2, Member3}
+\date
+
+
+\renewcommand{\bibname}{REFERENCES}
+\renewcommand\contentsname{TABLE OF CONTENTS}
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\renewcommand{\listtablename}{LIST OF TABLES}
+
+
+
+
+\begin{document}
+
+\include{section/cover}
+\pagenumbering{roman}
+\include{section/approval}
+\include{section/Copyright}
+\include{section/Acknowledgement}
+\include{section/abstract}
+
+\renewcommand{\baselinestretch}{1.5}
+\addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
+\newpage
+\renewcommand\cftfigafterpnum{\baselinestretch}
+\renewcommand\cftfigafterpnum{\vskip5pt\par}
+\addcontentsline{toc}{chapter}{\listfigurename}{ \listoffigures}
+\newpage
+\addcontentsline{toc}{chapter}{\listtablename}{ \listoftables}
+\newpage
+\include{section/abbreviations}
+\pagenumbering{arabic}
+\include{section/introduction}
+\include{section/literaturereview}
+\include{section/design}
+\include{section/theory}
+\include{section/Methodology}
+\include{section/result and analysis}
+\include{section/epilogue}
+
+\newpage
+
+\bibliographystyle{unsrt}
+\bibliography{refrences/ref.bib}
+\addcontentsline{toc}{chapter}{REFERENCES}
+
+
+\include{section/appendix}
+\addcontentsline{toc}{chapter}{ANNEX}
+\end{document}
+
+% %%code copied by 
+% % %IOE Latex Template originally
+% % %prepared by Ramesh Bhandari 072/MSI/610
+% % % modified by Dr. Basanta Joshi
+
+% %Page layout setup
+% \documentclass[12pt,a4paper,oneside]{report}
+% \usepackage[left=1.5in, right=1in,top=1in,bottom=1in,headheight=6pt, a4paper]{geometry}
+
+
+% %Package imports
+% \usepackage{multirow}
+% \usepackage{rotating}
+% \usepackage{hhline}
+% \usepackage{graphicx}
+% \graphicspath{{./Graphics/}} 
+% \usepackage{titling}
+% \usepackage{booktabs}
+% \usepackage{natbib}
+% \usepackage{microtype}
+% \usepackage{amsmath}
+% \usepackage{enumitem}
+% \usepackage[font=normalsize,labelfont=bf,tableposition=top]{caption}
+% \usepackage{setspace}
+% \usepackage[explicit]{titlesec}
+% \usepackage{tabto}
+% \usepackage[hidelinks]{hyperref}
+% \usepackage[justification=centering]{caption}
+
+
+% %Line spacing
+% \renewcommand{\baselinestretch}{1.5}
+% \setlength{\parskip}{0em}
+
+% %Paragraph indentation
+% \setlength{\parindent}{0em}
+
+% %Chapter formatting
+% \titleformat{\chapter}[display]
+%     {\centering\normalfont\normalsize\bfseries}{\MakeUppercase{\chaptertitlename} \thechapter}{5pt}{\normalsize #1}
+% \titlespacing{\chapter}{0pt}{0pt}{20pt}
+
+% %Heading-1 formatting
+% \titleformat{\section}
+%   {\normalfont\normalsize\bfseries}{\thesection}{1em}{#1}
+
+% %Heading-2 formatting
+% \titleformat{\subsection}
+%   {\normalfont\normalsize}{\thesubsection}{1em}{#1}
+
+% %Heading-3 formatting
+% \titleformat{\subsubsection}
+%   {\normalfont\normalsize}{\thesubsubsection}{1em}{#1}
+
+% %Table caption formatting
+% \captionsetup[table]{singlelinecheck=off}
+
+% %Metadata
+% \title{IMAGE COLORIZATION USING CONVOLUTIONAL NEURAL NETWORK }
+% \author{YOUR NAME}
+% \date{\today}
+
+
+% \renewcommand{\bibname}{REFERENCES}
+% \renewcommand\contentsname{TABLE OF CONTENTS}
+% \renewcommand{\listfigurename}{LIST OF FIGURES}
+% \renewcommand{\listtablename}{LIST OF TABLES}
+
+
+% \begin{document}
+    
+%     %Include cover page
+%     \include{section/cover}
+    
+%     %Include abstract
+%     \include{section/abstract}
+    
+%     %Table of contents
+%     \addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
+    
+%     %List of figures
+    
+%     \newpage
+%     \addcontentsline{toc}{chapter}{\listfigurename}{
+%         %
+%         \let\oldnumberline\numberline%
+%         \renewcommand{\numberline}{\figurename~\oldnumberline}%
+%         \listoffigures
+%         %
+%     }
+    
+%     %List of tables
+%     \newpage
+%     \addcontentsline{toc}{chapter}{\listtablename}{
+%         %
+%         \let\oldnumberline\numberline%
+%         \renewcommand{\numberline}{\tableautorefname~\oldnumberline}%
+%         \listoftables
+%         %
+%     }
+    
+%     \newpage
+%     \include{section/abbreviations}
+%     \include{section/introduction}
+%     \include{section/literaturereview}
+%     \include{section/theory}
+%     \include{section/methodlogy}
+%     \include{section/expected_output}
+%     \newpage
+    
+%     \bibliographystyle{unsrt}
+%     \bibliography{refrences/ref.bib}
+%     \addcontentsline{toc}{chapter}{REFERENCES}
+%     \include{section/appendix}
+
+% \end{document}
+
