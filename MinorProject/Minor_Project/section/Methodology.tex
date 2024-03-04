@@ -30,16 +30,26 @@
             
        \section{Selection of Raspberry Pi 4 Model B}
        The Raspberry Pi 4 Model B was chosen for our home automation project due to its robust performance, and versatile connectivity. With its quad-core ARM Cortex-A72 processor and adequate memory options, it efficiently executes complex algorithms such as speech recognition. Its built-in Wi-Fi, Bluetooth, USB ports, and GPIO pins facilitate integration with peripheral devices like the Arduino Nano, enabling straightforward hardware control. Overall, the Raspberry Pi 4 Model B serves as the fundamental of our project, offering powerful performance, and reliability to meet the demands of our home automation system.
+\newpage
+        \section{Activity diagram}
+        \begin{figure}[htbp] 
+            \centering
+            \includegraphics[height=0.7\textheight]{finalact}
+            \caption{Activity Diagram}
+            \label{fig:Activity}
+        \end{figure}
+\newpage
 
         \section{Interfacing between Raspberry Pi 4 Model B and components}
-        The Raspberry Pi 4 Model B serves as our development board, which oversees the functions of different hardware elements that, in turn, regulates  the operations of household fixtures. The figure below shows all the interfacing of the home automation system system.
-
         \begin{figure}[h]
             \centering
             \includegraphics[width=1\textwidth]{interfacing}
             \caption{Interfacing}
             \label{fig:interface}
         \end{figure}
+        The Raspberry Pi 4 Model B serves as our development board, which oversees the functions of different hardware elements that, in turn, regulates  the operations of household fixtures. The figure below shows all the interfacing of the home automation system.
+
+        
         From the above diagram, we are illustrating the interfacing between different components present in our system. We are using Raspberry Pi 4 Model B as our development board which uses ARM Cortex-A72 CPU. Control Signal is transmitted from the USB port of the Raspberry Pi to Arduino Nano.The Arduino Nano controls the actions of fixtures. The fixtures are controlled by the signal received from Arduino Nano. External power is provided to the hardware components if needed.\\
         Hence, this is the interfacing between all our components of hardware, i.e Raspberry Pi, Arduino Nano, Relay module, LED, Servo motor, Motor driver and DC motor.
 

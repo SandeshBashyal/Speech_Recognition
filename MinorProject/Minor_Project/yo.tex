@@ -24,6 +24,9 @@
 \usepackage{float}
 \usepackage{datetime}
 
+\pagestyle{plain}
+
+
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
 
@@ -61,18 +64,23 @@
 
 \begin{document}
 \include{section/cover}
+\pagenumbering{Roman}
 \include{section/approval}
+
 \include{section/Copyright}
 \include{section/Acknowledgement}
 \include{section/abstract}
 
 \renewcommand{\baselinestretch}{1.5}
 \addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
+\setcounter{page}{6}
 \renewcommand\cftfigafterpnum{\baselinestretch}
 \renewcommand\cftfigafterpnum{\vskip5pt\par}
 \addcontentsline{toc}{chapter}{\listfigurename}{\listoffigures}
 
 \include{section/abbreviations}
+\pagestyle{plain}
+\pagenumbering{arabic}
 \include{section/introduction}
 \include{section/literaturereview}
 \include{section/relatedtheory}
@@ -82,7 +90,7 @@
 \include{section/epilogue}
 \newpage
 
-\bibliographystyle{unsrt}
+\bibliographystyle{IEEEtran}
 \bibliography{refrences/ref.bib}
 \addcontentsline{toc}{chapter}{REFERENCES}
 % \include{section/appendix}
