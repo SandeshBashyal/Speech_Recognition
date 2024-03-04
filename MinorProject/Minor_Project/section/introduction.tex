@@ -1,0 +1,36 @@
+\pagenumbering{arabic}
+\chapter{INTRODUCTION}
+    \section{Background}
+    In the contemporary era of smart living, home automation systems have become increasingly popular due to their ability to enhance convenience, efficiency and also catering to individuals with mobility challenges. Integration of speech recognition technology into home automation systems adds an additional layer of user-friendliness, accessibility, leveraging its power to seamlessly interact with various devices within a home environment.
+
+    Traditional method with physical switching of appliances, checking if they are on or not brings a level of inconvenience to disabled as well as abled people. This system can accurately interpret the user instructions and generates control signals for appliances. It does so by capturing audio input through a connected microphone.
+
+    Upon receiving the audio signals, Raspberry pi utilizes a speech recognition model within it which converts the received voice data into text commands enabling the system to comprehend user instructions accurately. Once the command is interpreted, It then generates necessary control signals and sends them to a 1-channel relay module and other hardware components, allowing a seamless control of different household appliances connected to the system. The status of the appliances are updated in real-time which can be viewed on a dashboard of a web application. This system not only operates the appliances, but also views their status which makes it easier to observe them  when we are not physically present near them.
+
+    \section{Motivation and Inspiration}
+    Our project's motivation and inspiration stemmed from a genuine desire to simplify and improve daily life within homes. Witnessing the growing integration of technology into our lives, we were inspired to utilize advancements in speech recognition and automation to make household tasks more efficient and accessible. Our goal was to empower users with intuitive control over their environment, aiming for a user-friendly home automation system. Additionally, we were excited about the opportunity to explore the intersection of artificial intelligence, embedded systems, and IoT technologies, seeing it as a chance to deepen our understanding and expertise in these areas. 
+    
+    \section{Problem Statement}
+    The absence of automated controls requires manual operation of various appliances and thus results in a time consuming routine. Managing multiple devices  manually  can be troublesome especially for elderly and the disabled. The commercial home automation systems are based mainly on Zigbee, Z-Wave, or Wi-Fi protocols. Such automated systems are either ineffective in terms of cost or power consumption. 
+
+    Additionally, the complexity of processing speech in real-time poses a significant challenge. Existing systems often struggle with accurately interpreting the intent of the speaker. Thus, the technologies that are being applied are prone to various kinds of failures, for instance an individual’s speech can be misinterpreted,in case of multiple commands by more than one person the commands might be neglected. 
+
+    
+    \section{Objectives}
+    The objectives of this project are:
+        \begin{itemize}
+        %define spacing
+        \setlength\itemsep{1.5pt}
+        %Add items
+        \item To design and develop a speech recognizing home automation system.
+ 
+        \item To develop a system that can comprehend user instructions accurately and operates accordingly.
+
+        \end{itemize}
+
+
+    \section{Scope}
+    Our project's scope involves creating a comprehensive home automation system that merges speech recognition technology with hardware automation to improve household functionality. Our main goal is to develop an easy-to-use interface enabling residents to control various home fixtures and devices through voice commands. 
+
+    We also plan to incorporate features for task scheduling, such as setting timers and activating predefined routines, to streamline daily routines further. The Raspberry Pi 4 Model B will serve as the central controlling unit, facilitating communication between the speech recognition algorithm and connected hardware components through the Arduino Nano. While our initial focus is on essential features, we're designing the system to be scalable, allowing for future expansions and updates to meet changing user needs and technological advancements in home automation.
+         

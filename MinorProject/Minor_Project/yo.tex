@@ -1,7 +1,6 @@
-%Sagarmatha Engineering College Project Report Template
 \documentclass[12pt,a4paper,oneside]{report}
 \usepackage[titles]{tocloft}
-
+\usepackage{subfig}
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{hhline}
@@ -24,10 +23,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{float}
 \usepackage{datetime}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\fancyfoot[C]{\thepage}
+
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
 
@@ -62,15 +58,9 @@
 \renewcommand{\bibname}{REFERENCES}
 \renewcommand\contentsname{TABLE OF CONTENTS}
 \renewcommand{\listfigurename}{LIST OF FIGURES}
-\renewcommand{\listtablename}{LIST OF TABLES}
-
-
-
 
 \begin{document}
-
 \include{section/cover}
-\pagenumbering{roman}
 \include{section/approval}
 \include{section/Copyright}
 \include{section/Acknowledgement}
@@ -78,32 +68,25 @@
 
 \renewcommand{\baselinestretch}{1.5}
 \addcontentsline{toc}{chapter}{\contentsname}{\tableofcontents}
-\newpage
 \renewcommand\cftfigafterpnum{\baselinestretch}
 \renewcommand\cftfigafterpnum{\vskip5pt\par}
-\addcontentsline{toc}{chapter}{\listfigurename}{ \listoffigures}
-\newpage
-\addcontentsline{toc}{chapter}{\listtablename}{ \listoftables}
-\newpage
+\addcontentsline{toc}{chapter}{\listfigurename}{\listoffigures}
+
 \include{section/abbreviations}
-\pagenumbering{arabic}
 \include{section/introduction}
 \include{section/literaturereview}
-\include{section/design}
-\include{section/theory}
+\include{section/relatedtheory}
+% \include{section/design}
 \include{section/Methodology}
 \include{section/result and analysis}
 \include{section/epilogue}
-
 \newpage
 
 \bibliographystyle{unsrt}
 \bibliography{refrences/ref.bib}
 \addcontentsline{toc}{chapter}{REFERENCES}
-
-
-\include{section/appendix}
-\addcontentsline{toc}{chapter}{ANNEX}
+% \include{section/appendix}
+% \addcontentsline{toc}{chapter}{ANNEX}
 \end{document}
 
 % %%code copied by 
