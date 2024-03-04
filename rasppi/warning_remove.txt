@@ -1,0 +1,2 @@
+export OPENBLAS_NUM_THREADS=1 to suppress the warnings and then run
+python3 whisper.py
