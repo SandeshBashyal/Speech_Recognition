@@ -35,6 +35,21 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+def calculate_loudness(audio_signal):
+    # Convert int16 array to floating point for calculations
+      audio_signal_float = audio_signal.astype(np.float32)
+
+      # Calculate RMS amplitude
+      rms_amplitude = np.sqrt(np.mean(audio_signal_float**2))
+      return rms_amplitude
+def record_sub_audio(frames = 10000, sampling_rate=sampling_rate):
+        # Record audio from the microphone for duration of t sec
+        audio_data = sd.rec(int(frames), samplerate=sampling_rate, channels=1, dtype=np.int16)
+        sd.wait()
+        amp=calculate_loudness(audio_data)
+        # print(amp) prin this to find optimal value of am 
+        return amp
+
 # load model and processor
 processor = WhisperProcessor.from_pretrained("openai/whisper-base.en")
 model = WhisperForConditionalGeneration.from_pretrained("openai/whisper-base.en")
@@ -49,6 +64,7 @@ duration = 5
 frames = sampling_rate * duration
 
 while True:
+
     def record_audio(frames = frames, sampling_rate=sampling_rate):
         # Record audio from the microphone for duration of t sec
         audio_data = sd.rec(int(frames), samplerate=sampling_rate, channels=1, dtype=np.int16)
@@ -76,6 +92,13 @@ while True:
     print('Rec started:')
     # Print the duration before recording
     # print(f"Recording audio with duration: {duration} seconds")
+    print('Rec started:')
+    while True:
+        amp = record_sub_audio()
+        if amp > 230:
+            break
+    print('activity detected')
+
     audio_signal = record_audio(frames)
     print(audio_signal)
 
