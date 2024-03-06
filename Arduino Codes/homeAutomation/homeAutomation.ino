@@ -19,21 +19,29 @@ void setup(){
   servoForDoor.attach(3);
   servoForDoor.write(55);
   Serial.begin(9600);
+
+    digitalWrite(lightPin1, LOW);
+    digitalWrite(inP1A, LOW);  
+    digitalWrite(inP2A, LOW);
+    servoForDoor.write(55);
+    digitalWrite(relayPin2, HIGH);
 }
 
 void loop(){
   if(Serial.available()>0){
     userInput = Serial.read();
-    digitalWrite(lightPin1, HIGH);
-    delay(50);
-    digitalWrite(lightPin1, LOW);
+    //digitalWrite(lightPin1, HIGH);
+    //delay(50);
+    //digitalWrite(lightPin1, LOW);
+    //delay(50);
+
 
   }
 
 
   if(userInput == 'A'){
     digitalWrite(lightPin1, HIGH);
- //     Serial.println("LED turned ON.");
+ //     Serial.println("LED tuArned ON.");
   }
 
 
@@ -72,13 +80,13 @@ void loop(){
     }
 
     if(userInput == 'G'){
-    digitalWrite(relayPin2, HIGH);
+    digitalWrite(relayPin2, LOW);
  //     Serial.println("Light is turned ON.");
   }
 
 
   if(userInput == 'H'){
-    digitalWrite(relayPin2, LOW);
+    digitalWrite(relayPin2, HIGH);
  //     Serial.println("Light is turned OFF.");
   }
 
@@ -87,7 +95,7 @@ void loop(){
     digitalWrite(inP1A, HIGH);  
     digitalWrite(inP2A, LOW);
     servoForDoor.write(0);
-    digitalWrite(relayPin2, HIGH);
+    digitalWrite(relayPin2, LOW);
  //     Serial.println("Everything is turned ON.");
   }
 
@@ -96,7 +104,7 @@ void loop(){
     digitalWrite(inP1A, LOW);  
     digitalWrite(inP2A, LOW);
     servoForDoor.write(55);
-    digitalWrite(relayPin2, LOW);
+    digitalWrite(relayPin2, HIGH);
 
  //     Serial.println("Everything is turned OFF.");
   }
