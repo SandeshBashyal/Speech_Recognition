@@ -1,6 +1,10 @@
-torch
+torch 
 transformers
 datasets
 librosa
 soundfile
 sounddevice
+scipy
+pvporcupine
+pyaudio
+pyttsx3
