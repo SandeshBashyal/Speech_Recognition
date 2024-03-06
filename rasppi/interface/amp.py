@@ -22,6 +22,6 @@ def record_sub_audio(frames = 10000, sampling_rate=sampling_rate):
 while True:
     amp = record_sub_audio()
     print(amp)
-    if amp > 230:
+    if amp > 3500:
         break
     print('activity detected')

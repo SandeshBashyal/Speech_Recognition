@@ -17,10 +17,10 @@ url = 'http://192.168.11.107:4000/api'
 
 
 mapped_phrase_to_character ={
-	'led on' : 'A',
-	'led off' : 'B',
-	'fan on' : 'C',
-	'fan off' : 'D',
+    'led on' : 'A',
+    'led off' : 'B',
+    'fan on' : 'C',
+    'fan off' : 'D',
     'open door' : 'E',
     'close door' : 'F',
     'lights on' : 'G',
@@ -34,7 +34,7 @@ def map_character(input_phrase, mapped_phrase = mapped_phrase_to_character):
     return mapped_character
 
 sampling_rate = 44100
-duration = 5
+duration = 4
 frames = sampling_rate * duration
 
 def calculate_loudness(audio_signal):
@@ -281,7 +281,7 @@ while True:
                 print('Command not found')
 
             # speak('Loop Completed')
-            frames = 44100 * 5
+            frames = 44100 * 4
             sampling_rate = 44100
         
         break
