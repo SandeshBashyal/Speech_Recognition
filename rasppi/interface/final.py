@@ -92,7 +92,7 @@ output_filename = "rt_recorded_audio.wav"
 while True:
 
     print('Rec started:')
-    ser.write('A'.encode())
+
     # Print the duration before recording
     # print(f"Recording audio with duration: {duration} seconds")
     while True:
@@ -101,6 +101,7 @@ while True:
             break
     print('activity detected')
 
+    ser.write('A'.encode())
     audio_signal = record_audio(frames)
     ser.write('B'.encode())
 
@@ -143,13 +144,13 @@ while True:
         while True:
 
             print('Rec started:')
-            ser.write('A'.encode()) 
 
             while True:
                 amp = record_sub_audio()
                 if amp > 230:
                     break
             print('activity detected')
+            ser.write('A'.encode())
 
             audio_signal = record_audio(frames)
             ser.write('B'.encode())
