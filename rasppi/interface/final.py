@@ -4,8 +4,8 @@ from scipy.io.wavfile import write
 import sounddevice as sd
 import numpy as np
 import subprocess
-import pyttsx3 as tts
-import pyaudio as pa
+# import pyttsx3 as tts
+# import pyaudio as pa
 # import os
 # import importlib
 import string
